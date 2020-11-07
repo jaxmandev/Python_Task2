@@ -1,4 +1,4 @@
-# Lists - Restaurant Waiter Helper program
+# Restaurant Waiter Helper program
 
 ### Timings
 - 30 Minutes
