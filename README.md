@@ -24,7 +24,7 @@ AS a User I want to be able to see the menu in a formated way, so that I can ord
 ```
 # As a user, I want to have my order read back to me in formated way so I know what I ordered.
 ```
-### Acceptance Criteria
+### Acceptance Criteria
 ```
 - its own project on your laptop and Github
 - be git tracked
