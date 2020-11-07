@@ -10,7 +10,8 @@ Now that we've created had some time to use our lists, time to make something mo
 - You are going to make a program that helps a waiter with his menu and his orders.
 See tasks for the user stories.
 
-### Tasks
+
+### Tasks - User Stories
 #### 1
 ```
 AS a User I want to be able to see the menu in a formated way, so that I can order my meal.
