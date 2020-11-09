@@ -7,22 +7,23 @@ class Waiter(Menu):
         def __init__(self):
             super().__init__()
             self.order = [] # variable unique to this child
-            self.bill = []
+            self.bill = [] # to accumulate the price of each selection
 
         # ask customer his desire: 1-see menu, 2-order, 3-review order, and 4-validate order
         def ordering(self):
             while True:
-                choice = input("1 --> Show menu\n 2 --> Add to order\n 3 --> Show order\n 4 --> Satisfied with order\n --> ")
+                choice = int(input("\n 1 --> Show menu\n 2 --> Add to order\n 3 --> Show order\n 4 --> Satisfied with order\n --> "))
                 
                 # print the menu from parent class
                 if choice == 1:
-                    print(self.menu)
-                
+                    for dish, price in self.menu.items():
+                        print(f'The {dish} for £ {price}.')
+
                 # add the input to order list while checking it exists
                 # add the item's price to the bill list
                 elif choice == 2:
-                    add_to_menu = input("--> ")
-                    if add_to_menu in self.menu.keys():
+                    add_to_menu = input("--> ").title()
+                    if add_to_menu in self.menu.items():
                         self.order.append(add_to_menu)
                         for i in self.order:
                             for j in self.menu:
@@ -32,7 +33,7 @@ class Waiter(Menu):
                                     continue
                         bill = sum(bill)
                     else:
-                        print("Your order is not in menu")
+                        print("Your order is not in menu, have another look at the menu if necessary.")
                 
                 # view the items ordered so far
                 elif choice == 3:
